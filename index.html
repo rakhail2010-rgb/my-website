@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Helps the page display correctly on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gardens | Grow Something Wonderful</title>
+
+    <style>
+        /* Basic page settings */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #26352b;
+            background-color: #fbfcf8;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        /* Visible keyboard focus helps users navigate without a mouse */
+        a:focus,
+        button:focus {
+            outline: 3px solid #f1b84b;
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            z-index: 10;
+            padding: 10px 14px;
+            background-color: #ffffff;
+            color: #203b2a;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+        }
+
+        /* Header and navigation */
+        .site-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e1e8dc;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .logo {
+            color: #28633d;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .navigation ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .navigation a {
+            color: #26352b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navigation a:hover,
+        .navigation a[aria-current="page"] {
+            color: #28633d;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        /* Main welcome section */
+        .hero {
+            background: linear-gradient(120deg, #e6f2df, #f6f2df);
+            padding: 72px 24px;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            max-width: 700px;
+            margin: 0 0 16px;
+            color: #204d31;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.15;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 0 26px;
+            font-size: 1.15rem;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 6px;
+            background-color: #28633d;
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #1d4a2d;
+        }
+
+        /* General page sections */
+        .section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 52px 24px;
+        }
+
+        .section h2 {
+            margin-top: 0;
+            color: #204d31;
+            font-size: 2rem;
+        }
+
+        .intro-text {
+            max-width: 720px;
+        }
+
+        /* Box cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 26px;
+        }
+
+        .card {
+            padding: 22px;
+            border: 1px solid #dce6d7;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #28633d;
+        }
+
+        .card a {
+            color: #28633d;
+            font-weight: bold;
+        }
+
+        /* Activity strip */
+        .activities {
+            background-color: #eef4ea;
+        }
+
+        .activity-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .activity-list li {
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: #ffffff;
+        }
+
+        /* Footer */
+        .site-footer {
+            padding: 24px;
+            background-color: #203b2a;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .site-footer a {
+            color: #ffffff;
+        }
+
+        /* Adjust layout for smaller screens */
+        @media (max-width: 700px) {
+            .nav-container {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .navigation ul {
+                gap: 12px 18px;
+            }
+
+            .hero {
+                padding: 52px 20px;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a class="logo" href="index.html" aria-label="Gardens home page">
+                Gardens
+            </a>
+
+            <nav class="navigation" aria-label="Main navigation">
+                <ul>
+                    <li>
+                        <a href="index.html" aria-current="page">Home</a>
+                    </li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="boxes.html">Our Boxes</a></li>
+                    <li><a href="activities.html">Activities &amp; Advice</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Grow something wonderful</h1>
+
+                <p>
+                    Discover gardening boxes, practical advice and activities
+                    for beginners and keen gardeners.
+                </p>
+
+                <a class="button" href="boxes.html">Explore our boxes</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="intro-text">
+                <h2>A little more green in your life</h2>
+
+                <p>
+                    Gardens helps people enjoy gardening with useful products,
+                    friendly guidance and ideas for every season. Whether you
+                    are growing your first plant or caring for an established
+                    garden, you can find something to help you get started.
+                </p>
+            </div>
+        </section>
+
+        <section class="section" aria-labelledby="boxes-heading">
+            <h2 id="boxes-heading">Find a box that suits you</h2>
+
+            <div class="card-grid">
+                <article class="card">
+                    <h3>Oddbox</h3>
+                    <p>
+                        Discover weekly deliveries featuring wonky vegetables
+                        rejected by supermarkets, along with vegetable seeds
+                        and a blog.
+                    </p>
+                    <a href="boxes.html">Learn about our boxes</a>
+                </article>
+
+                <article class="card">
+                    <h3>Flourish</h3>
+                    <p>
+                        Enjoy four boxes a year with seeds, seed trays, a
+                        watering can and handmade cruelty-free soap.
+                    </p>
+                    <a href="boxes.html">Learn about our boxes</a>
+                </article>
+
+                <article class="card">
+                    <h3>Cottage</h3>
+                    <p>
+                        Receive a monthly box with wild flower seeds, fact
+                        cards, seed markers and twine.
+                    </p>
+                    <a href="boxes.html">Learn about our boxes</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="activities" aria-labelledby="activities-heading">
+            <div class="section">
+                <h2 id="activities-heading">Ideas and advice for your garden</h2>
+
+                <p class="intro-text">
+                    Explore our activities and guidance to help you care for
+                    your plants and enjoy gardening throughout the year.
+                </p>
+
+                <ul class="activity-list">
+                    <li>Monthly gardening checklist</li>
+                    <li>Greenhouse tips</li>
+                    <li>Garden maintenance advice</li>
+                    <li>Allotment jobs</li>
+                    <li>Open gardens</li>
+                </ul>
+
+                <a class="button" href="activities.html">Explore activities</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>
+            Gardens provides products and activities for gardeners.
+            <a href="contact.html">Contact us</a> to ask about custom boxes.
+        </p>
+    </footer>
+</body>
+</html>
